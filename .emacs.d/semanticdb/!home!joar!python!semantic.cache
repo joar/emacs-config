@@ -1,0 +1,234 @@
+;; Object python/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "python/"
+  :tables (list 
+   (semanticdb-table "pygst-thumbnailer.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("sys" include nil nil [1 15])
+            ("pygtk" include nil nil [16 42])
+            ("pygst" include nil nil [43 55])
+            ("pygst" code nil nil [56 77])
+            ("gst" include nil nil [78 88])
+            ("VideoThumbnailer" type
+               (:superclasses ("gobject.GObject")
+                :members 
+                  ( ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [147 151]))                      ) (reparse-symbol indented_block_body) [134 839])
+                    ("start_stop" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [858 862])
+                        ("w" variable nil (reparse-symbol function_parameters) [864 865]))                      ) (reparse-symbol indented_block_body) [843 1197])
+                    ("on_message" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [1220 1224])
+                        ("bus" variable nil (reparse-symbol function_parameters) [1226 1229])
+                        ("message" variable nil (reparse-symbol function_parameters) [1231 1238]))                      ) (reparse-symbol indented_block_body) [1205 1540]))                  
+                :type "class")
+                nil [90 1540])
+            ("GTK_Main" code nil nil [1541 1551])
+            ("gtk" code nil nil [1552 1574])
+            ("gtk" code nil nil [1575 1585]))          
+    :file "pygst-thumbnailer.py"
+    :pointmax 1561
+    :fsize 1585
+    :lastmodtime '(20095 49825)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "gst-transcoder.py"
+    :major-mode 'python-mode
+    :tags 
+        '( ("'''
+uridecodebin uri="file:///home/joar/Dropbox/Public/blender/more-fluids.mp4" name=dmux webmmux name=mux
+ ! queue
+ ! filesink name=sink location="more-fluids-web1.webm" dmux.
+ ! queue
+ ! ffmpegcolorspace
+ ! videorate
+ ! videoscale
+ ! video/x-raw-yuv, width=(int)960, height=(int)540, framerate=(fraction)25/1, pixel-aspect-ratio=(fraction)1/1; video/x-raw-rgb, width=(int)960, height=(int)540, framerate=(fraction)25/1, pixel-aspect-ratio=(fraction)1/1
+ ! vp8enc quality=5.75 threads=2 speed=2
+ ! tee name=videotee
+ ! queue
+ ! mux.video_%d
+'''" code nil nil [1 546])
+            ("command" variable nil nil [547 1085])
+            ("gobject" include nil nil [1087 1101])
+            ("gst" include nil nil [1102 1112])
+            ("try" code nil nil [1114 1211]))          
+    :file "gst-transcoder.py"
+    :pointmax 1211
+    :fsize 1210
+    :lastmodtime '(20074 16829)
+    :unmatched-syntax 'nil
+    )
+   (semanticdb-table "transcoder.py"
+    :major-mode 'python-mode
+    :tags 
+        '( (""""
+    Arista Transcoder
+    =================
+    A class to transcode files given a preset.
+    
+    License
+    -------
+    Copyright 2009 - 2011 Daniel G. Taylor <dan@programmer-art.org>
+    
+    This file is part of Arista.
+
+    Arista is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as 
+    published by the Free Software Foundation, either version 2.1 of
+    the License, or (at your option) any later version.
+
+    Arista is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public
+    License along with Arista.  If not, see
+    <http://www.gnu.org/licenses/>.
+"""" code nil nil [24 920])
+            ("gettext" include nil nil [922 936])
+            ("logging" include nil nil [937 951])
+            ("os" include nil nil [952 961])
+            ("os.path" include nil nil [962 976])
+            ("sys" include nil nil [977 987])
+            ("time" include nil nil [988 999])
+            ("CPU_COUNT" variable nil nil [1061 1074])
+            ("try" code nil nil [1075 1238])
+            ("gobject" include nil nil [1239 1253])
+            ("gst" include nil nil [1254 1264])
+            ("discoverer" include nil nil [1266 1283])
+            ("_" variable nil nil [1285 1304])
+            ("_log" variable nil nil [1305 1350])
+            ("TranscoderException" type
+               (:superclasses ("Exception")
+                :members 
+                  ( (""""
+        A generic transcoder exception to be thrown when something goes wrong.
+    """" code nil (reparse-symbol indented_block_body) [1575 1665])
+                    ("pass" code nil (reparse-symbol indented_block_body) [1670 1674]))                  
+                :type "class")
+                nil [1533 1675])
+            ("TranscoderStatusException" type
+               (:superclasses ("TranscoderException")
+                :members 
+                  ( (""""
+        An exception to be thrown when there is an error retrieving the current
+        status of an transcoder.
+    """" code nil (reparse-symbol indented_block_body) [1734 1858])
+                    ("pass" code nil (reparse-symbol indented_block_body) [1863 1867]))                  
+                :type "class")
+                nil [1676 1868])
+            ("PipelineException" type
+               (:superclasses ("TranscoderException")
+                :members 
+                  ( (""""
+        An exception to be thrown when the transcoder fails to construct a 
+        working pipeline for whatever reason.
+    """" code nil (reparse-symbol indented_block_body) [1919 2052])
+                    ("pass" code nil (reparse-symbol indented_block_body) [2057 2061]))                  
+                :type "class")
+                nil [1869 2062])
+            ("TranscoderOptions" type
+               (:superclasses ("object")
+                :members 
+                  ( (""""
+        Options pertaining to the input/output location, presets, 
+        subtitles, etc.
+    """" code nil (reparse-symbol indented_block_body) [2282 2384])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [2402 2406])
+                        ("uri" variable nil (reparse-symbol function_parameters) [2408 2411])
+                        ("preset" variable nil (reparse-symbol function_parameters) [2420 2426])
+                        ("output_uri" variable nil (reparse-symbol function_parameters) [2435 2445])
+                        ("ssa" variable nil (reparse-symbol function_parameters) [2454 2457])
+                        ("subfile" variable nil (reparse-symbol function_parameters) [2484 2491])
+                        ("subfile_charset" variable nil (reparse-symbol function_parameters) [2500 2515])
+                        ("font" variable nil (reparse-symbol function_parameters) [2524 2528])
+                        ("deinterlace" variable nil (reparse-symbol function_parameters) [2564 2575])
+                        ("crop" variable nil (reparse-symbol function_parameters) [2584 2588])
+                        ("title" variable nil (reparse-symbol function_parameters) [2597 2602])
+                        ("chapter" variable nil (reparse-symbol function_parameters) [2611 2618])
+                        ("audio" variable nil (reparse-symbol function_parameters) [2644 2649]))                      ) (reparse-symbol indented_block_body) [2389 3950])
+                    ("reset" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [3969 3973])
+                        ("uri" variable nil (reparse-symbol function_parameters) [3975 3978])
+                        ("preset" variable nil (reparse-symbol function_parameters) [3987 3993])
+                        ("output_uri" variable nil (reparse-symbol function_parameters) [4002 4012])
+                        ("ssa" variable nil (reparse-symbol function_parameters) [4021 4024])
+                        ("subfile" variable nil (reparse-symbol function_parameters) [4048 4055])
+                        ("subfile_charset" variable nil (reparse-symbol function_parameters) [4064 4079])
+                        ("font" variable nil (reparse-symbol function_parameters) [4088 4092])
+                        ("deinterlace" variable nil (reparse-symbol function_parameters) [4125 4136])
+                        ("crop" variable nil (reparse-symbol function_parameters) [4145 4149])
+                        ("title" variable nil (reparse-symbol function_parameters) [4158 4163])
+                        ("chapter" variable nil (reparse-symbol function_parameters) [4172 4179])
+                        ("audio" variable nil (reparse-symbol function_parameters) [4202 4207]))                      ) (reparse-symbol indented_block_body) [3959 4653]))                  
+                :type "class")
+                nil [2245 4653])
+            ("Transcoder" type
+               (:superclasses ("gobject.GObject")
+                :members 
+                  ( (""""
+        The transcoder - converts media between formats.
+    """" code nil (reparse-symbol indented_block_body) [4871 4939])
+                    ("__gsignals__" variable nil (reparse-symbol indented_block_body) [4944 5688])
+                    ("__init__" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [5711 5715])
+                        ("options" variable nil (reparse-symbol function_parameters) [5717 5724]))                      ) (reparse-symbol indented_block_body) [5698 9580])
+                    ("property" code nil (reparse-symbol indented_block_body) [9590 9598])
+                    ("infile" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9614 9618]))                      ) (reparse-symbol indented_block_body) [9603 9903])
+                    ("property" code nil (reparse-symbol indented_block_body) [9913 9921])
+                    ("preset" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [9937 9941]))                      ) (reparse-symbol indented_block_body) [9926 10205])
+                    ("_get_source" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [10230 10234]))                      ) (reparse-symbol indented_block_body) [10214 11621])
+                    ("_setup_pass" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [11646 11650]))                      ) (reparse-symbol indented_block_body) [11630 26284])
+                    ("_build_pipeline" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [26313 26317])
+                        ("cmd" variable nil (reparse-symbol function_parameters) [26319 26322]))                      ) (reparse-symbol indented_block_body) [26293 27087])
+                    ("_on_message" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [27112 27116])
+                        ("bus" variable nil (reparse-symbol function_parameters) [27118 27121])
+                        ("message" variable nil (reparse-symbol function_parameters) [27123 27130]))                      ) (reparse-symbol indented_block_body) [27096 27880])
+                    ("start" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [27899 27903])
+                        ("reset_timer" variable nil (reparse-symbol function_parameters) [27905 27916]))                      ) (reparse-symbol indented_block_body) [27889 28085])
+                    ("pause" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [28104 28108]))                      ) (reparse-symbol indented_block_body) [28094 28205])
+                    ("stop" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [28219 28223]))                      ) (reparse-symbol indented_block_body) [28210 28317])
+                    ("get_state" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [28336 28340]))                      ) (reparse-symbol indented_block_body) [28322 28620])
+                    ("set_state" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [28643 28647])
+                        ("state" variable nil (reparse-symbol function_parameters) [28649 28654]))                      ) (reparse-symbol indented_block_body) [28629 28904])
+                    ("state" variable nil (reparse-symbol indented_block_body) [28913 28951])
+                    ("get_status" function (:arguments 
+                      ( ("self" variable nil (reparse-symbol function_parameters) [28976 28980]))                      ) (reparse-symbol indented_block_body) [28961 30884])
+                    ("status" variable nil (reparse-symbol indented_block_body) [30893 30922]))                  
+                :type "class")
+                nil [4832 30923]))          
+    :file "transcoder.py"
+    :pointmax 30928
+    :fsize 30927
+    :lastmodtime '(20074 16058)
+    :unmatched-syntax '((punctuation 9912 . 9913) (punctuation 9589 . 9590))
+    )
+   (semanticdb-table "gstreamer-test.py"
+    :major-mode 'python-mode
+    :tags nil
+    :file "gstreamer-test.py"
+    :pointmax 24
+    :fsize 638
+    :lastmodtime '(20080 51489)
+    :unmatched-syntax 'nil
+    )
+   )
+  :file "!home!joar!python!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.0"
+  )
